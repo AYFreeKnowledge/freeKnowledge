@@ -1,13 +1,23 @@
 package com.freeknowledge.service;
 
+import java.util.List;
+
 import com.freeknowledge.model.User;
 
 public interface UserService {
-	 
-    void save(User user);
-     
+    
     User findById(int id);
      
-    User findBySso(String sso);
+    User findBySSO(String sso);
      
+    void saveUser(User user);
+     
+    void updateUser(User user);
+     
+    void deleteUserBySSO(String sso);
+ 
+    List<User> findAllUsers(); 
+     
+    boolean isUserSSOUnique(Integer id, String sso);
+ 
 }

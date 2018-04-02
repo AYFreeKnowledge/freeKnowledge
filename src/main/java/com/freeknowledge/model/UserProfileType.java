@@ -1,6 +1,8 @@
 package com.freeknowledge.model;
- 
-public enum UserProfileType {
+
+import java.io.Serializable;
+
+public enum UserProfileType implements Serializable {
     USER("USER"),
     DBA("DBA"),
     ADMIN("ADMIN");
@@ -14,5 +16,4 @@ public enum UserProfileType {
     public String getUserProfileType(){
         return userProfileType;
     }
-     
 }
